@@ -4,7 +4,10 @@ import { Geist } from "next/font/google";
 import { ThemeProvider } from "next-themes";
 import { createClient } from "@/utils/supabase/server";
 import { Toaster } from "@/components/ui/toaster";
+import FluidCursor from "@/components/FluidCursor";
 import "./globals.css";
+
+
 
 const baseUrl = process.env.BASE_URL
   ? `https://${process.env.BASE_URL}`
@@ -40,6 +43,7 @@ export default async function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
+          <FluidCursor />
           <div className="relative min-h-screen">
             <Header user={user} />
             <main className="flex-1">{children}</main>
