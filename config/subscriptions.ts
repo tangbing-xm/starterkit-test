@@ -4,7 +4,7 @@ export const SUBSCRIPTION_TIERS: ProductTier[] = [
   {
     name: "Starter",
     id: "tier-hobby",
-    productId: "prod_5me4yLKI4EP55h99vPZVYY", // $11 monthly subscription
+    productId: "prod_2RoOqhbvjLX9C3jw18M0zN", // $11 monthly subscription
     priceMonthly: "$11",
     description: "Perfect for individual developers and small projects.",
     features: [
@@ -33,12 +33,12 @@ export const SUBSCRIPTION_TIERS: ProductTier[] = [
       "API usage dashboard",
     ],
     featured: true,
-    discountCode: "WELCOME", // Optional discount code
+    discountCode: "", // Optional discount code
   },
   {
     name: "Enterprise",
     id: "tier-enterprise",
-    productId: "prod_5me4yLKI4EP55h99vPZVYY", // $99 monthly subscription
+    productId: "prod_5SGoSm9n23Wg1zE4gOP3Wb", // $99 monthly subscription
     priceMonthly: "$99",
     description: "For large organizations with advanced requirements.",
     features: [
@@ -58,7 +58,7 @@ export const CREDITS_TIERS: ProductTier[] = [
   {
     name: "Basic Package",
     id: "tier-3-credits",
-    productId: "prod_5me4yLKI4EP55h99vPZVYY", // $9 one-time purchase
+    productId: "", // $9 one-time purchase
     priceMonthly: "$9",
     description: "3 credits for testing and small-scale projects.",
     creditAmount: 3,
@@ -74,7 +74,7 @@ export const CREDITS_TIERS: ProductTier[] = [
   {
     name: "Standard Package",
     id: "tier-6-credits",
-    productId: "prod_5me4yLKI4EP55h99vPZVYY", // $13 one-time purchase
+    productId: "", // $13 one-time purchase
     priceMonthly: "$13",
     description: "6 credits for medium-sized applications.",
     creditAmount: 6,
@@ -90,7 +90,7 @@ export const CREDITS_TIERS: ProductTier[] = [
   {
     name: "Premium Package",
     id: "tier-9-credits",
-    productId: "prod_5me4yLKI4EP55h99vPZVYY", // $29 one-time purchase
+    productId: "", // $29 one-time purchase
     priceMonthly: "$29",
     description: "9 credits for larger applications and production use.",
     creditAmount: 9,
