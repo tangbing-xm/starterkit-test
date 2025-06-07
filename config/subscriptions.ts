@@ -33,7 +33,7 @@ export const SUBSCRIPTION_TIERS: ProductTier[] = [
       "API usage dashboard",
     ],
     featured: true,
-    discountCode: "", // Optional discount code
+    discountCode: "0520", // Optional discount code
   },
   {
     name: "Enterprise",
