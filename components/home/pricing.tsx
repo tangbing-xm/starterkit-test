@@ -25,6 +25,11 @@ export default function Pricing() {
     }
 
     try {
+      toast({
+        title: "Processing",
+        description: "Creating checkout session...",
+      });
+      
       const checkoutUrl = await createCheckoutSession(
         productId,
         user.email,
@@ -36,12 +41,24 @@ export default function Pricing() {
 
       if (checkoutUrl) {
         window.location.href = checkoutUrl;
+      } else {
+        toast({
+          title: "Error",
+          description: "Failed to get checkout URL. Please try again.",
+          variant: "destructive",
+        });
       }
     } catch (error) {
       console.error("Error creating checkout session:", error);
+      let errorMessage = "Failed to create checkout session. Please try again.";
+      
+      if (error instanceof Error) {
+        errorMessage = error.message || errorMessage;
+      }
+      
       toast({
-        title: "Error",
-        description: "Failed to create checkout session. Please try again.",
+        title: "Payment Error",
+        description: errorMessage,
         variant: "destructive",
       });
     }
@@ -63,6 +80,11 @@ export default function Pricing() {
     }
 
     try {
+      toast({
+        title: "Processing",
+        description: "Creating checkout session...",
+      });
+      
       const checkoutUrl = await createCheckoutSession(
         productId,
         user.email,
@@ -74,12 +96,24 @@ export default function Pricing() {
 
       if (checkoutUrl) {
         window.location.href = checkoutUrl;
+      } else {
+        toast({
+          title: "Error",
+          description: "Failed to get checkout URL. Please try again.",
+          variant: "destructive",
+        });
       }
     } catch (error) {
       console.error("Error creating checkout session:", error);
+      let errorMessage = "Failed to create checkout session. Please try again.";
+      
+      if (error instanceof Error) {
+        errorMessage = error.message || errorMessage;
+      }
+      
       toast({
-        title: "Error",
-        description: "Failed to create checkout session. Please try again.",
+        title: "Payment Error",
+        description: errorMessage,
         variant: "destructive",
       });
     }
